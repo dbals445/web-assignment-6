@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM 실습 문제</title>
+</head>
+<body>
+
+    <h1 id="title">처음 제목입니다.</h1>
+    <button id="changeButton">제목 바꾸기</button>
+    <button id="styleButton">스타일 바꾸기</button>
+
+    <br><br><hr><br>
+
+    <h1>이미지 속성 변경</h1>
+    <img id="image" alt="이미지가 여기에 표시됩니다.">
+    <br><br>
+    <button id="imageButton">이미지 보이기</button>
+
+    <script>
+        
+        const titleElement = document.getElementById('title');
+        const changeBtn = document.getElementById('changeButton');
+
+        changeBtn.addEventListener('click', function() {
+            titleElement.textContent = '제목이 성공적으로 바뀌었습니다!';
+        });
+
+
+       
+        const styleBtn = document.getElementById('styleButton');
+
+        styleBtn.addEventListener('click', function() {
+            titleElement.style.color = 'white';
+            titleElement.style.backgroundColor = 'blue';
+            titleElement.style.padding = '10px';
+        });
+
+
+    
+        const myImage = document.getElementById('image');
+        const imgBtn = document.getElementById('imageButton');
+
+        imgBtn.addEventListener('click', function() {
+            myImage.src = 'https://placehold.co/300x200';
+            myImage.width = 300;
+            myImage.height = 200;
+        });
+    </script>
+
+</body>
+</html>
